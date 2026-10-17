@@ -1,4 +1,6 @@
-# GShockTimeServer
+# GshockTimeSetbetPi
+
+This is the Raspberry Pi edition of GShockTimeServer, with optional SPI display support and Pi installation tools. The generic, headless server remains in the [GShockTimeServer repository](https://github.com/izivkov/GShockTimeServer).
 
 📢 **Announcement**: We're looking for contributors!
 Check out our [list of features](https://github.com/izivkov/GShockTimeServer/issues) we'd like to implement. If you're up for a challenge, feel free to assign an issue to yourself and create a pull request.
