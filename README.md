@@ -1,4 +1,4 @@
-# GshockTimeSetverPi
+# GShockTimeServerPi
 
 This is the Raspberry Pi edition of GShockTimeServer, with optional SPI display support and Pi installation tools. The generic, headless server remains in the [GShockTimeServer repository](https://github.com/izivkov/GShockTimeServer).
 
@@ -161,10 +161,10 @@ sudo apt-get -y install git
 ```
 and then get the software:
 ```
-git clone https://github.com/izivkov/GshockTimeSetverPi.git
+git clone https://github.com/izivkov/GShockTimeServerPi.git
 ```
 
-This creates a `GshockTimeSetverPi` directory containing the server source and setup scripts. Setup can take a while, especially on a Pi Zero.
+This creates a `GShockTimeServerPi` directory containing the server source and setup scripts. Setup can take a while, especially on a Pi Zero.
 
 > **Pro Tip:** If you have another Raspberry Pi device in addition to the Pi Zero, you can set up the server on that device and use the **same SD card** on both.  
 > The key is to use a **32-bit OS** when creating the image with Raspberry Pi Imager, as it ensures compatibility across all Pi models, including the Pi Zero.
@@ -172,7 +172,7 @@ This creates a `GshockTimeSetverPi` directory containing the server source and s
 ## Setup Scripts
 
 ```
-cd GshockTimeSetverPi/src/scripts
+cd GShockTimeServerPi/src/scripts
 ```
 
 ### setup.sh
