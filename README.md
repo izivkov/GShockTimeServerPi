@@ -68,7 +68,7 @@ The server waits for watches to connect via Bluetooth, and sends them the time o
 
 ## 3. Quick Start
 
-💡 Note: In addition to this repository, we have created another repo on GitHub (https://github.com/izivkov/gshock-server-dist), specifically for distribution. It holds all the files necessary to run the server and no more. This repository is preferable for getting the distribution files, since it also controls versioning. Installing dependencies for the display can get a bit complex, so we provide setup scripts, which use this repository to automatically set up your device.
+The Raspberry Pi setup scripts are included in this repository under `src/scripts`; no separate distribution repository is required.
 
 ### Headless
 
@@ -161,10 +161,10 @@ sudo apt-get -y install git
 ```
 and then get the software:
 ```
-git clone https://github.com/izivkov/gshock-server-dist.git
+git clone https://github.com/izivkov/GshockTimeSetbetPi.git
 ```
 
-This will create a directory `gshock-server-dist` containing a number of shell scripts needed to set up the server. Note that running the scripts takes relatively long time. In the Pi 3/4, typically half an hour. On the Pi Zero, let it run overnight ;-).
+This creates a `GshockTimeSetbetPi` directory containing the server source and setup scripts. Setup can take a while, especially on a Pi Zero.
 
 > **Pro Tip:** If you have another Raspberry Pi device in addition to the Pi Zero, you can set up the server on that device and use the **same SD card** on both.  
 > The key is to use a **32-bit OS** when creating the image with Raspberry Pi Imager, as it ensures compatibility across all Pi models, including the Pi Zero.
@@ -172,7 +172,7 @@ This will create a directory `gshock-server-dist` containing a number of shell s
 ## Setup Scripts
 
 ```
-cd gshock-server-dist
+cd GshockTimeSetbetPi/src/scripts
 ```
 
 ### setup.sh

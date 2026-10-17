@@ -1,6 +1,7 @@
 
 from PIL import Image, ImageDraw, ImageFont
 from datetime import datetime
+from pathlib import Path
 
 
 font_small = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 16)
@@ -40,8 +41,7 @@ def show_welcome_screen(self, message, watch_name=None, last_sync=None):
 
     # Load background image
     try:
-        img_path = "gshock-server-dist/display/pic/dw-b5600.png" if hasattr(self, 'output_file') \
-            else "display/pic/dw-b5600.png"
+        img_path = Path(__file__).resolve().parent / "pic" / "dw-b5600.png"
 
         image = Image.open(img_path).convert("RGB").resize((self.width, self.height))
     except FileNotFoundError:

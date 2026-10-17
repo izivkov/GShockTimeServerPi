@@ -2,8 +2,10 @@
 set -x
 set -e
 
-# Change to the project root directory containing pyproject.toml and requirements.txt
-cd "$(dirname "$0")"
+# Change to the repository root containing pyproject.toml and requirements.txt.
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+PROJECT_DIR="$(cd "$SCRIPT_DIR/../.." && pwd)"
+cd "$PROJECT_DIR"
 
 # Update package list and install system dependencies needed for building Python packages
 sudo apt-get update
@@ -45,8 +47,8 @@ Type=simple
 
 # Run as your user (recommended)
 User=$SERVICE_USER
-WorkingDirectory=$HOME/gshock-server-dist
-ExecStart=$HOME/.local/bin/uv run gshock_server.py
+WorkingDirectory=$PROJECT_DIR
+ExecStart=$HOME/.local/bin/uv run src/gshock-server/gshock_server.py
 Environment=PYTHONUNBUFFERED=1
 
 # Restart on crashes

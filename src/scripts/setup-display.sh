@@ -8,7 +8,9 @@ set -x
 
 echo "== Display setup =="
 
-INSTALL_DIR="$(cd "$(dirname "$0")"; pwd)"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+PROJECT_DIR="$(cd "$SCRIPT_DIR/../.." && pwd)"
+cd "$PROJECT_DIR"
 SERVICE_USER="$(whoami)"
 
 # Update apt and install required system packages for building and runtime
@@ -44,8 +46,8 @@ Type=simple
 
 # Run as your user (recommended)
 User=$SERVICE_USER
-WorkingDirectory=$HOME/gshock-server-dist
-ExecStart=$HOME/.local/bin/uv run gshock_server_display.py --display $DISPLAY_TYPE
+WorkingDirectory=$PROJECT_DIR
+ExecStart=$HOME/.local/bin/uv run src/gshock-server/gshock_server_display.py --display $DISPLAY_TYPE
 Environment=PYTHONUNBUFFERED=1
 
 # Restart on crashes

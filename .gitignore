@@ -21,9 +21,6 @@ time-server-pi.img.gz
 *.tar.gz
 *.whl
 *.zip
-make_dist.sh
-/gshock-server-dist/*
-!/gshock-server-dist/.git
 
 # Project files
 .ropeproject
